@@ -100,7 +100,10 @@ export const handleVoiceStateUpdate = async (
             newState.setChannel(channel);
             // Channel permissions for members. [Edit, disconnect or move, mute and deafen] v13
             console.log(newState.guild.id)
-            channel.permissionOverwrites.set([{ id: newState.member, allow: ['MANAGE_CHANNELS', 'MOVE_MEMBERS', 'MUTE_MEMBERS', 'DEAFEN_MEMBERS'] }]);
+            channel.permissionOverwrites.set([
+                { id: newState.guild.id, deny: ['CONNECT'] },
+                { id: newState.member, allow: ['MANAGE_CHANNELS', 'MOVE_MEMBERS', 'MUTE_MEMBERS', 'DEAFEN_MEMBERS'] }
+            ]);
             // Add the child
             parentChannel.children.push({
                 owner: newState.member,
