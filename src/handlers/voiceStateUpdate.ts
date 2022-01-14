@@ -83,6 +83,7 @@ export const handleVoiceStateUpdate = async (
                 newChannelName,
                 {
                     parent: parentChannel.options.childCategory,
+                    permissionOverwrites: [{ id: newState.guild.id, deny: ['VIEW_CHANNEL'] }],
                     bitrate: parentChannel.options.childBitrate,
                     userLimit: parentChannel.options.childMaxUsers,
                     type: "GUILD_VOICE"
