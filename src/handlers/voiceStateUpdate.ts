@@ -79,11 +79,12 @@ export const handleVoiceStateUpdate = async (
                 newState.member,
                 count
             );
+            const everyoneId = newState.guild.id;
             const channel = await newState.guild.channels.create(
                 newChannelName,
                 {
                     parent: parentChannel.options.childCategory,
-                    permissionOverwrites: [{ id: newState.guild.id, deny: ['CONNECT'] }],
+                    permissionOverwrites: [{ id: everyoneId, deny: ['CONNECT'] }],
                     bitrate: parentChannel.options.childBitrate,
                     userLimit: parentChannel.options.childMaxUsers,
                     type: "GUILD_VOICE"
