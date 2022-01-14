@@ -13,7 +13,7 @@
     "lint": "tslint -p tsconfig.json",
     "prepublish": "npm run build"
   },
-  "repository": "git+https://github.com/txj-xyz/discord-temp-channels.git",
+  "repository": "git+https://github.com/txj-xyz/discord-temp-voice.git",
   "author": "TXJ <discord@txj69.xyz>",
   "license": "MIT",
   "dependencies": {
