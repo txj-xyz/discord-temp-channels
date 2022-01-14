@@ -1,5 +1,5 @@
 {
-  "name": "discord-temp-channels",
+  "name": "discord-temp-voice",
   "version": "3.1.0",
   "description": "Simple framework to facilitate the creation of a temporary voice channels system using Discord.js",
   "main": "lib/index.js",
@@ -13,8 +13,8 @@
     "lint": "tslint -p tsconfig.json",
     "prepublish": "npm run build"
   },
-  "repository": "git+https://github.com/Androz2091/discord-temp-channels.git",
-  "author": "Androz2091 <androz2091@gmail.com>",
+  "repository": "git+https://github.com/txj-xyz/discord-temp-channels.git",
+  "author": "TXJ <discord@txj69.xyz>",
   "license": "MIT",
   "dependencies": {
     "discord.js": "^13.0.0"
